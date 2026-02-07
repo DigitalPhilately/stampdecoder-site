@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Support — StampDecoder.app</title>
+  <meta name="description" content="Support and FAQs for Modern GB Stamp Decoder."/>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="/">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>StampDecoder.app</strong>
+          <span>Modern GB Stamp Decoder</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+        <a href="/feedback/">Feedback</a>
+      </nav>
+    </header>
+
+    <main class="panel">
+      <h1 class="pageTitle">Support</h1>
+      <p class="pageIntro">
+        Need help, spotted a strange decode, or want to suggest a feature? Email
+        <a href="mailto:support@stampdecoder.app">support@stampdecoder.app</a> or use the feedback page.
+      </p>
+
+      <div class="section">
+        <h2>Quick help</h2>
+        <ul>
+          <li><strong>Camera won’t scan:</strong> improve lighting, wipe lens, hold steady, try slightly further away.</li>
+          <li><strong>Nothing happens:</strong> check camera permission in Settings.</li>
+          <li><strong>Decode looks incomplete:</strong> some fields vary by issue or may be “not yet known”.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>FAQ</h2>
+        <p><strong>Is this an official Royal Mail app?</strong><br/>
+          No. Modern GB Stamp Decoder is an independent collector tool and is not affiliated with Royal Mail.
+        </p>
+        <p><strong>Do you track users?</strong><br/>
+          No. The app uses no analytics and no tracking.
+        </p>
+        <p><strong>What should I send if something looks wrong?</strong><br/>
+          Send the barcode string (if you can copy it), plus your device model and iOS/Android version.
+        </p>
+      </div>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="/feedback/">Send feedback</a>
+        <a class="btn" href="mailto:support@stampdecoder.app?subject=Modern%20GB%20Stamp%20Decoder%20-%20Support">Email support</a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> StampDecoder.app</div>
+      <div><a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="/feedback/">Feedback</a></div>
+    </footer>
+  </div>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

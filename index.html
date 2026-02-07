@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>StampDecoder.app — Modern GB Stamp Decoder</title>
+  <meta name="description" content="Scan and decode modern GB stamp barcodes (JGB / DataMatrix). A collector-friendly tool for Digital Philately."/>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="/">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>StampDecoder.app</strong>
+          <span>Modern GB Stamp Decoder</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+        <a href="/feedback/">Feedback</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="panel">
+        <p class="kicker">Digital Philately</p>
+        <h1 class="h1">Scan and decode modern GB stamp barcodes.</h1>
+        <p class="lede">
+          Modern GB Stamp Decoder helps collectors understand barcoded stamps (JGB / DataMatrix) at a glance —
+          with a clear summary and a full decode view for the details.
+        </p>
+
+        <div class="badges" aria-label="Highlights">
+          <div class="badge">JGB / DataMatrix decoding</div>
+          <div class="badge">Collector-friendly summary</div>
+          <div class="badge">No tracking • No analytics</div>
+        </div>
+
+        <div class="ctaRow">
+          <!-- Not live yet: these are placeholders -->
+          <a class="btn primary" href="/feedback/?intent=notify">Get notified on launch</a>
+          <a class="btn" href="/support/">Support & FAQ</a>
+          <a class="btn small" href="mailto:support@stampdecoder.app?subject=Modern%20GB%20Stamp%20Decoder%20-%20General%20enquiry">Email support</a>
+        </div>
+
+        <p class="note">
+          App Store and Google Play links will appear here when the app is live.
+        </p>
+
+        <div class="hr"></div>
+
+        <div class="cardGrid">
+          <div class="card">
+            <h3>Fast scan-first flow</h3>
+            <p>Open the camera, scan the barcode, see the result immediately.</p>
+          </div>
+          <div class="card">
+            <h3>Summary + Full decode</h3>
+            <p>Simple collector view up front, deeper breakdown when you want it.</p>
+          </div>
+          <div class="card">
+            <h3>Built for modern GB</h3>
+            <p>Focused on the realities of barcoded stamp collecting.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>What you’ll see</h2>
+          <ul>
+            <li>Barcode generation date and key fields extracted from the JGB string</li>
+            <li>Issue-type and origin guidance where available</li>
+            <li>Useful “at a glance” wording designed for collectors</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Who it’s for</h2>
+          <p>
+            Collectors of modern GB barcoded stamps, people exploring Digital Philately, and anyone who wants
+            a cleaner way to understand what a barcode is telling them.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Independent collector tool</h2>
+          <p>
+            This app is an independent project for collectors and is not affiliated with Royal Mail.
+          </p>
+        </div>
+      </section>
+
+      <aside class="panel mock" aria-label="App preview">
+        <div class="mockTop">
+          <p class="kicker">Preview</p>
+          <div class="device" role="img" aria-label="Placeholder for app screenshots"></div>
+          <p class="deviceLabel">
+            Add screenshots later (Summary, Full Decode, Scanner). This placeholder keeps the layout looking finished.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Coming soon</h3>
+          <p>
+            Want early access or to help test? Use the feedback page and tell me what device you’re on (iPhone/Android).
+          </p>
+          <div class="ctaRow" style="margin-top:12px">
+            <a class="btn primary" href="/feedback/?intent=beta">Help test</a>
+            <a class="btn" href="/privacy/">Privacy</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> StampDecoder.app</div>
+      <div>
+        <a href="/privacy/">Privacy</a> ·
+        <a href="/support/">Support</a> ·
+        <a href="/feedback/">Feedback</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

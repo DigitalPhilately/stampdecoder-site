@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Feedback — StampDecoder.app</title>
+  <meta name="description" content="Send feedback for Modern GB Stamp Decoder."/>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="/">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>StampDecoder.app</strong>
+          <span>Modern GB Stamp Decoder</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+        <a href="/feedback/">Feedback</a>
+      </nav>
+    </header>
+
+    <main class="panel">
+      <h1 class="pageTitle">Feedback</h1>
+      <p class="pageIntro">
+        Tell me what you’d like improved, or paste a barcode string if a decode looks odd.
+        This site doesn’t use tracking. Feedback is sent via email to
+        <a href="mailto:support@stampdecoder.app">support@stampdecoder.app</a>.
+      </p>
+
+      <div class="form" id="fb">
+        <div>
+          <div class="label">Topic</div>
+          <select class="input" id="topic">
+            <option value="General feedback">General feedback</option>
+            <option value="Bug report">Bug report</option>
+            <option value="Feature request">Feature request</option>
+            <option value="Beta / early access">Beta / early access</option>
+            <option value="Launch notification">Notify me on launch</option>
+          </select>
+        </div>
+
+        <div>
+          <div class="label">Your email (optional)</div>
+          <input class="input" id="email" placeholder="name@example.com" />
+        </div>
+
+        <div>
+          <div class="label">Barcode string (optional)</div>
+          <input class="input" id="barcode" placeholder="Paste the JGB / DataMatrix string here" />
+          <div class="help">If the barcode contains address-like details, please remove them before sending.</div>
+        </div>
+
+        <div>
+          <div class="label">Message</div>
+          <textarea class="input" id="msg" placeholder="What happened? What would you like the app to do?"></textarea>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="#" id="send">Open email</a>
+          <a class="btn" href="mailto:support@stampdecoder.app?subject=Modern%20GB%20Stamp%20Decoder%20-%20Feedback">Email without form</a>
+        </div>
+
+        <p class="note">
+          When the app goes live, this page can be upgraded to a proper form (Formspree/Netlify etc.) without changing the design.
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> StampDecoder.app</div>
+      <div><a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Prefill topic from querystring (?intent=notify or ?intent=beta)
+    const qs = new URLSearchParams(location.search);
+    const intent = (qs.get("intent") || "").toLowerCase();
+    const topic = document.getElementById("topic");
+    if (intent === "notify") topic.value = "Launch notification";
+    if (intent === "beta") topic.value = "Beta / early access";
+
+    function enc(s){ return encodeURIComponent(s || ""); }
+
+    document.getElementById("send").addEventListener("click", function(e){
+      e.preventDefault();
+      const t = topic.value;
+      const em = document.getElementById("email").value.trim();
+      const bc = document.getElementById("barcode").value.trim();
+      const m  = document.getElementById("msg").value.trim();
+
+      const subject = `Modern GB Stamp Decoder - ${t}`;
+      let body = "";
+      if (em) body += `Your email: ${em}\n`;
+      if (bc) body += `Barcode: ${bc}\n`;
+      body += `\nMessage:\n${m || "(no message)"}\n`;
+      body += `\n---\nDevice/OS (optional):\n`;
+
+      const mailto = `mailto:support@stampdecoder.app?subject=${enc(subject)}&body=${enc(body)}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
