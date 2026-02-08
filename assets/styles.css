@@ -55,8 +55,8 @@ a{ color: inherit; }
 }
 
 .logo{
-  width:84px;
-  height:84px;
+  width:96px;
+  height:96px;
   border-radius:0;
   background-color: transparent;
   background-image: url("/assets/img/brand.png");
@@ -65,7 +65,7 @@ a{ color: inherit; }
   background-repeat: no-repeat;
   border: none;
   box-shadow: none;
-  flex: 0 0 84px;
+  flex: 0 0 96px;
 }
 
 .brand strong{ font-size:15px; letter-spacing:.2px; }
@@ -246,20 +246,13 @@ a{ color: inherit; }
   aspect-ratio: 9/16;
   border-radius: 24px;
   border: 1px solid var(--line);
-  background:
-    radial-gradient(220px 160px at 20% 20%, rgba(63,78,122,.18), transparent 60%),
-    radial-gradient(180px 140px at 80% 30%, rgba(120,140,210,.18), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.18));
+  background: #11172a url("/assets/img/preview-summary.png") center/contain no-repeat;
   position:relative;
   overflow:hidden;
 }
 
 .device:before{
-  content:"";
-  position:absolute;
-  inset:18px;
-  border-radius:18px;
-  border:1px dashed rgba(63,78,122,.22);
+  content:none;
 }
 
 .deviceLabel{
