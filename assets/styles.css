@@ -246,7 +246,7 @@ a{ color: inherit; }
   aspect-ratio: 9/16;
   border-radius: 24px;
   border: none;
-  background: transparent url("/assets/img/preview-summary.png") center top / 122% auto no-repeat;
+  background: transparent url("/assets/img/preview-summary.png") center / contain no-repeat;
   position:relative;
   overflow:hidden;
 }
