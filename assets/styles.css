@@ -245,8 +245,8 @@ a{ color: inherit; }
 .device{
   aspect-ratio: 9/16;
   border-radius: 24px;
-  border: 1px solid var(--line);
-  background: #11172a url("/assets/img/preview-summary.png") center/contain no-repeat;
+  border: none;
+  background: transparent url("/assets/img/preview-summary.png") center top / 122% auto no-repeat;
   position:relative;
   overflow:hidden;
 }
