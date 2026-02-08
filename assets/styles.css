@@ -1,29 +1,35 @@
 :root{
-  --bg:#0b1020;
-  --panel:#0f1733;
-  --card:#121c3d;
-  --text:#f4f6ff;
-  --muted:#b9c2e6;
-  --line:rgba(255,255,255,.12);
-  --cta:#ffffff;
-  --ctaText:#0b1020;
-  --accent:rgba(255,255,255,.16);
-  --shadow: 0 18px 50px rgba(0,0,0,.35);
-  --radius:18px;
+  /* App-aligned palette (approx) */
+  --bg: #F6F7FB;          /* page background */
+  --surface: #FFFFFF;     /* cards/panels */
+  --surface2: #F1F3FA;    /* subtle tinted panels */
+  --text: #151A2D;        /* primary text */
+  --muted: #5E647C;       /* secondary text */
+  --line: rgba(23, 29, 55, .12);
+
+  /* Primary brand colour (matches your Scan button vibe) */
+  --primary: #3F4E7A;     /* indigo/blue */
+  --primary2: #334064;    /* darker */
+  --primaryText: #FFFFFF;
+
+  /* Accents */
+  --chip: #E9ECF7;        /* lavender chip background */
+  --shadow: 0 18px 50px rgba(15, 20, 40, .10);
+  --radius: 18px;
   --max: 1080px;
 }
-
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
+
 body{
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 700px at 20% -10%, #24307a 0%, rgba(36,48,122,0) 50%),
-              radial-gradient(900px 600px at 110% 10%, #1e6d79 0%, rgba(30,109,121,0) 48%),
-              linear-gradient(180deg, var(--bg), #070a14 70%);
-  color:var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  margin:0;
+  color: var(--text);
+  background: radial-gradient(900px 500px at 30% -10%, rgba(63,78,122,.10), transparent 60%),
+              radial-gradient(900px 500px at 110% 0%, rgba(120,140,210,.10), transparent 55%),
+              var(--bg);
   line-height:1.45;
 }
-
 a{color:inherit}
 .container{max-width:var(--max); margin:0 auto; padding:22px 18px 60px;}
 .topbar{
