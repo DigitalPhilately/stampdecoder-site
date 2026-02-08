@@ -58,9 +58,14 @@ a{ color: inherit; }
   width:34px;
   height:34px;
   border-radius:10px;
-  background: linear-gradient(145deg, rgba(63,78,122,.25), rgba(63,78,122,.10));
+  background-color: #d9deea;
+  background-image: url("/assets/img/brand.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid rgba(63,78,122,.20);
   box-shadow: 0 10px 30px rgba(15, 20, 40, .10);
+  flex: 0 0 34px;
 }
 
 .brand strong{ font-size:15px; letter-spacing:.2px; }
