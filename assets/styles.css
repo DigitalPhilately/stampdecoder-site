@@ -242,3 +242,61 @@ a{color:inherit}
 textarea.input{min-height:140px; resize:vertical}
 .label{font-size:13px; color: var(--muted); margin:0 0 6px}
 .help{font-size:12px; color: var(--muted); margin:8px 0 0}
+
+.panel{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px;
+}
+
+.card{
+  background: var(--surface2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:8px;
+  padding:12px 16px;
+  border-radius: 999px;          /* pill like the app */
+  border:1px solid var(--line);
+  text-decoration:none;
+  font-weight:650;
+  font-size:14px;
+  background: var(--surface);
+  color: var(--text);
+}
+.btn.primary{
+  background: var(--primary);
+  color: var(--primaryText);
+  border-color: transparent;
+}
+.btn.primary:hover{ filter: brightness(.96); }
+.btn:hover{ background: #F7F8FD; }
+
+.badge{
+  font-size:12px;
+  padding:7px 12px;
+  border-radius: 999px;
+  border:1px solid rgba(63,78,122,.20);
+  background: var(--chip);
+  color: var(--primary2);
+}
+
+.logo{
+  width:34px; height:34px; border-radius:10px;
+  background: linear-gradient(145deg, rgba(63,78,122,.25), rgba(63,78,122,.10));
+  border: 1px solid rgba(63,78,122,.20);
+  box-shadow: 0 10px 30px rgba(15, 20, 40, .10);
+}
+
+
+
+
+
+
+
