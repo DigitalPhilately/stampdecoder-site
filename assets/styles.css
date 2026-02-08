@@ -55,17 +55,17 @@ a{ color: inherit; }
 }
 
 .logo{
-  width:34px;
-  height:34px;
-  border-radius:10px;
-  background-color: #d9deea;
+  width:56px;
+  height:56px;
+  border-radius:14px;
+  background-color: transparent;
   background-image: url("/assets/img/brand.png");
-  background-size: cover;
+  background-size: 145%;
   background-position: center;
   background-repeat: no-repeat;
-  border: 1px solid rgba(63,78,122,.20);
-  box-shadow: 0 10px 30px rgba(15, 20, 40, .10);
-  flex: 0 0 34px;
+  border: none;
+  box-shadow: none;
+  flex: 0 0 56px;
 }
 
 .brand strong{ font-size:15px; letter-spacing:.2px; }
