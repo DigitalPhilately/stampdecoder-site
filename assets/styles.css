@@ -243,10 +243,10 @@ a{ color: inherit; }
 }
 
 .device{
-  aspect-ratio: 9/16;
+  aspect-ratio: 1206/2622;
   border-radius: 24px;
   border: 2px solid #11172a;
-  background: transparent url("/assets/img/preview-summary.png") center top / 106% auto no-repeat;
+  background: transparent url("/assets/img/preview-summary.png") center / contain no-repeat;
   position:relative;
   overflow:hidden;
   box-shadow:
