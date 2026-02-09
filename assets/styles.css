@@ -44,7 +44,7 @@ a{ color: inherit; }
   align-items:center;
   justify-content:space-between;
   gap:14px;
-  padding:10px 0 24px;
+  padding:10px 0 20px;
 }
 
 .brand{
@@ -55,8 +55,8 @@ a{ color: inherit; }
 }
 
 .logo{
-  width:96px;
-  height:96px;
+  width:102px;
+  height:102px;
   border-radius:0;
   background-color: transparent;
   background-image: url("/assets/img/brand.png");
@@ -65,13 +65,13 @@ a{ color: inherit; }
   background-repeat: no-repeat;
   border: none;
   box-shadow: none;
-  flex: 0 0 96px;
+  flex: 0 0 102px;
 }
 
-.brand strong{ font-size:15px; letter-spacing:.2px; }
+.brand strong{ font-size:38px; letter-spacing:.2px; line-height:1.05; }
 .brand span{
   display:block;
-  font-size:12px;
+  font-size:23px;
   color: var(--muted);
   margin-top:2px;
 }
@@ -84,11 +84,23 @@ a{ color: inherit; }
 
 .nav a{
   text-decoration:none;
-  font-size:13px;
+  font-size:18px;
   padding:8px 10px;
   border-radius:12px;
   border:1px solid transparent;
   color: var(--muted);
+}
+
+@media (max-width: 920px){
+  .logo{
+    width:72px;
+    height:72px;
+    flex: 0 0 72px;
+  }
+
+  .brand strong{ font-size:24px; }
+  .brand span{ font-size:16px; }
+  .nav a{ font-size:15px; }
 }
 
 .nav a:hover{
