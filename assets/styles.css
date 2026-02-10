@@ -295,18 +295,22 @@ a{ color: inherit; }
   margin:18px 0;
 }
 
-.stampShowcase{
-  margin-top:18px;
-}
-
 .stampPhoto{
   display:block;
   width:100%;
-  max-width:520px;
-  margin:8px auto 0;
+  max-width:440px;
+  margin:8px 0 0;
   border-radius:16px;
   border:1px solid var(--line);
   box-shadow: 0 14px 30px rgba(10, 14, 28, .12);
+}
+
+.ledeStamp{
+  margin:8px 0 0;
+}
+
+.ledeStamp .note{
+  margin-top:8px;
 }
 
 .closing{
