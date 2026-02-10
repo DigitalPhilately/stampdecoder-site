@@ -295,6 +295,42 @@ a{ color: inherit; }
   margin:18px 0;
 }
 
+.stampShowcase{
+  margin-top:18px;
+}
+
+.stampPhoto{
+  display:block;
+  width:100%;
+  max-width:520px;
+  margin:8px auto 0;
+  border-radius:16px;
+  border:1px solid var(--line);
+  box-shadow: 0 14px 30px rgba(10, 14, 28, .12);
+}
+
+.closing{
+  margin-top:18px;
+  text-align:center;
+}
+
+.closingTitle{
+  margin:4px 0 8px;
+  font-size:32px;
+  line-height:1.1;
+  letter-spacing:-.3px;
+}
+
+.closingText{
+  margin:0 0 12px;
+  color: var(--muted);
+  font-size:16px;
+}
+
+.closing .ctaRow{
+  justify-content:center;
+}
+
 .footer{
   margin-top:26px;
   padding-top:18px;
