@@ -23,11 +23,12 @@
 html,body{ margin:0; padding:0; }
 
 body{
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-family: "Avenir Next", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
-  background: radial-gradient(900px 500px at 30% -10%, rgba(63,78,122,.10), transparent 60%),
-              radial-gradient(900px 500px at 110% 0%, rgba(120,140,210,.10), transparent 55%),
-              var(--bg);
+  background:
+    radial-gradient(1000px 560px at 22% -10%, rgba(63,78,122,.16), transparent 62%),
+    radial-gradient(920px 520px at 110% 0%, rgba(98,122,190,.14), transparent 58%),
+    linear-gradient(180deg, #f8f9fd 0%, #f2f4fb 100%);
   line-height:1.45;
 }
 
@@ -126,10 +127,11 @@ a{ color: inherit; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 26px;
+  padding: 30px;
 }
 
 .h1{
+  font-family: "SF Pro Display", "Avenir Next", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size:42px;
   line-height:1.08;
   margin:0 0 10px;
@@ -277,17 +279,42 @@ a{ color: inherit; }
 }
 
 .section{
-  margin-top:18px;
+  margin-top:28px;
 }
 
 .section h2{
+  font-family: "SF Pro Display", "Avenir Next", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size:18px;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   letter-spacing:-.2px;
 }
 
 .section p, .section li{ color: var(--muted); }
-.section ul{ margin:8px 0 0 18px; }
+.section ul{
+  list-style:none;
+  margin:10px 0 0;
+  padding:0;
+}
+
+.section li{
+  position:relative;
+  padding-left:28px;
+  margin:0 0 10px;
+}
+
+.section li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.48em;
+  width:16px;
+  height:16px;
+  border-radius:999px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.85) 0 22%, transparent 23%),
+    linear-gradient(135deg, #6a82c8 0%, #3f4e7a 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.28);
+}
 
 .hr{
   height:1px;
@@ -323,6 +350,24 @@ a{ color: inherit; }
 
 .storeLinks .btn{
   flex: 1 1 220px;
+}
+
+.storeBtn{
+  color:#fff;
+  border-color:transparent;
+  font-weight:700;
+}
+
+.storeBtn:hover{
+  filter:brightness(.96);
+}
+
+.appStore{
+  background:#111;
+}
+
+.playStore{
+  background:linear-gradient(135deg, #00c853 0%, #00b0ff 48%, #ff6d00 100%);
 }
 
 .closing{
