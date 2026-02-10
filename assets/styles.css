@@ -298,19 +298,31 @@ a{ color: inherit; }
 .stampPhoto{
   display:block;
   width:100%;
-  max-width:440px;
-  margin:8px 0 0;
+  max-width:320px;
+  margin:8px auto 0;
   border-radius:16px;
   border:1px solid var(--line);
   box-shadow: 0 14px 30px rgba(10, 14, 28, .12);
 }
 
 .ledeStamp{
-  margin:8px 0 0;
+  margin:8px 0 4px;
 }
 
 .ledeStamp .note{
   margin-top:8px;
+  text-align:center;
+}
+
+.storeLinks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+
+.storeLinks .btn{
+  flex: 1 1 220px;
 }
 
 .closing{
