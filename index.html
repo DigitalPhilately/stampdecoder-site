@@ -48,7 +48,7 @@
   }
   [id] { scroll-margin-top: 92px; }
 
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
 
   h1, h2, h3 { font-family: "SF Pro Display", "Avenir Next", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 800; letter-spacing: -.02em; line-height: 1.08; margin: 0; }
   h1 { font-size: clamp(44px, 6.2vw, 76px); letter-spacing: -.04em; }
@@ -62,42 +62,43 @@
     z-index: 50;
     background: transparent;
   }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 22px 0 12px; }
-  .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 32px 0 20px; }
+  .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
   .brand .mark {
-    width: 72px; height: 72px; border-radius: 0; background: transparent;
+    width: 102px; height: 102px; border-radius: 0; background: transparent;
     display: inline-flex; align-items: center; justify-content: center;
-    flex: 0 0 72px;
+    flex: 0 0 102px;
   }
   .brand .mark img { width: 100%; height: 100%; object-fit: contain; }
   .brand-copy { display: grid; gap: 1px; min-width: 0; }
   .brand-copy strong {
     color: var(--ink);
-    font-size: 28px;
+    font-size: 38px;
     font-weight: 850;
-    letter-spacing: -.02em;
+    letter-spacing: .2px;
     line-height: 1.05;
     white-space: nowrap;
   }
   .brand-copy span {
     color: var(--ink-3);
-    font-size: 18px;
+    font-size: 23px;
     font-weight: 500;
+    margin-top: 2px;
     white-space: nowrap;
   }
-  .nav-links { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: flex-end; font-size: 15px; color: var(--ink-3); }
-  .nav-links a:not(.nav-cta) {
+  .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; justify-content: flex-end; font-size: 18px; color: var(--ink-3); }
+  .nav-links a {
     padding: 8px 10px;
     border: 1px solid transparent;
     border-radius: 12px;
   }
-  .nav-links a:not(.nav-cta):hover {
+  .nav-links a:hover {
     border-color: var(--line);
     background: rgba(63,78,122,.06);
     color: var(--ink);
   }
-  .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border-radius: 999px;
-             background: var(--ink); color: var(--paper); font-weight: 700; font-size: 14px; }
+  .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 999px;
+             background: var(--ink); color: var(--paper); font-weight: 700; font-size: 15px; }
   .nav-cta:hover { background: var(--accent); }
   @media (max-width: 720px) { .nav-links .hide-sm { display: none; } }
 
@@ -368,6 +369,11 @@
     border-right: 1px solid var(--line);
   }
   .decode-stamp { width: 100%; max-width: 320px; }
+  .decode-stamp.real-stamp {
+    max-width: 360px;
+    border-radius: 14px;
+    box-shadow: 0 16px 34px rgba(15,20,40,.14);
+  }
   .decode-meta { color: var(--ink-3); font-size: 13px; margin-top: 16px; text-align: center; }
   .decode-info-pane { padding: 40px 44px; }
   .decode-info-pane .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
@@ -459,19 +465,20 @@
     .decode-info-pane { padding: 32px; }
     .final-cta { padding: 44px 32px; border-radius: 22px; }
     section { padding: 60px 0; }
-    .brand .mark { width: 58px; height: 58px; flex-basis: 58px; }
-    .brand-copy strong { font-size: 22px; }
-    .brand-copy span { font-size: 15px; }
+    .brand .mark { width: 72px; height: 72px; flex-basis: 72px; }
+    .brand-copy strong { font-size: 24px; }
+    .brand-copy span { font-size: 16px; }
+    .nav-links { font-size: 15px; }
   }
   @media (max-width: 560px) {
     .features { grid-template-columns: 1fr; }
     .audience { grid-template-columns: 1fr; }
     .decode-row { grid-template-columns: 1fr; gap: 2px; padding: 10px 0; }
     .hero { padding: 40px 0 20px; }
-    .wrap { padding: 0 20px; }
-    .nav-inner { gap: 12px; padding-top: 14px; }
+    .wrap { padding: 0 18px; }
+    .nav-inner { gap: 12px; padding-top: 18px; }
     .brand { gap: 10px; }
-    .brand .mark { width: 42px; height: 42px; flex-basis: 42px; }
+    .brand .mark { width: 56px; height: 56px; flex-basis: 56px; }
     .brand-copy strong { font-size: 15px; }
     .brand-copy span { display: none; }
     .nav-cta { padding: 9px 13px; }
@@ -493,12 +500,9 @@
       </span>
     </a>
     <nav class="nav-links">
-      <a href="#how" class="hide-sm">How it works</a>
-      <a href="#decode" class="hide-sm">Decode</a>
-      <a href="#faq" class="hide-sm">FAQ</a>
-      <a class="nav-cta" href="#cta">Help test
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/support/">Support</a>
+      <a href="/feedback/">Feedback</a>
     </nav>
   </div>
 </header>
@@ -672,42 +676,8 @@
 
     <div class="decode-card">
       <div class="decode-stamp-pane">
-        <svg class="decode-stamp" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="stampg" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#4A5A8A"/>
-              <stop offset="60%" stop-color="#3F4E7A"/>
-              <stop offset="100%" stop-color="#2A3050"/>
-            </linearGradient>
-            <mask id="perf">
-              <rect width="320" height="260" fill="white"/>
-              <g fill="black">
-                <!-- top -->
-                <circle cx="10" cy="10" r="7"/><circle cx="34" cy="10" r="7"/><circle cx="58" cy="10" r="7"/><circle cx="82" cy="10" r="7"/><circle cx="106" cy="10" r="7"/><circle cx="130" cy="10" r="7"/><circle cx="154" cy="10" r="7"/><circle cx="178" cy="10" r="7"/><circle cx="202" cy="10" r="7"/><circle cx="226" cy="10" r="7"/><circle cx="250" cy="10" r="7"/><circle cx="274" cy="10" r="7"/><circle cx="298" cy="10" r="7"/>
-                <!-- bottom -->
-                <circle cx="10" cy="250" r="7"/><circle cx="34" cy="250" r="7"/><circle cx="58" cy="250" r="7"/><circle cx="82" cy="250" r="7"/><circle cx="106" cy="250" r="7"/><circle cx="130" cy="250" r="7"/><circle cx="154" cy="250" r="7"/><circle cx="178" cy="250" r="7"/><circle cx="202" cy="250" r="7"/><circle cx="226" cy="250" r="7"/><circle cx="250" cy="250" r="7"/><circle cx="274" cy="250" r="7"/><circle cx="298" cy="250" r="7"/>
-                <!-- left -->
-                <circle cx="10" cy="34" r="7"/><circle cx="10" cy="58" r="7"/><circle cx="10" cy="82" r="7"/><circle cx="10" cy="106" r="7"/><circle cx="10" cy="130" r="7"/><circle cx="10" cy="154" r="7"/><circle cx="10" cy="178" r="7"/><circle cx="10" cy="202" r="7"/><circle cx="10" cy="226" r="7"/>
-                <!-- right -->
-                <circle cx="310" cy="34" r="7"/><circle cx="310" cy="58" r="7"/><circle cx="310" cy="82" r="7"/><circle cx="310" cy="106" r="7"/><circle cx="310" cy="130" r="7"/><circle cx="310" cy="154" r="7"/><circle cx="310" cy="178" r="7"/><circle cx="310" cy="202" r="7"/><circle cx="310" cy="226" r="7"/>
-              </g>
-            </mask>
-          </defs>
-          <rect x="6" y="6" width="308" height="248" rx="6" fill="url(#stampg)" mask="url(#perf)"/>
-          <!-- silhouette region -->
-          <g opacity=".9">
-            <path d="M90 36 C58 36 46 64 46 100 C46 122 56 138 70 152 C56 162 36 178 32 218 L142 218 C138 178 118 162 104 152 C118 138 128 122 128 100 C128 64 116 36 90 36 Z" fill="#F1F3FA" opacity=".82"/>
-          </g>
-          <line x1="155" y1="40" x2="155" y2="218" stroke="#F1F3FA" stroke-dasharray="2 4" opacity=".35"/>
-          <!-- value -->
-          <text x="285" y="56" text-anchor="end" font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-size="36" font-weight="800" fill="#F1F3FA">1<tspan font-size="20" baseline-shift="super">st</tspan></text>
-          <!-- barcode -->
-          <rect x="172" y="160" width="128" height="56" rx="2" fill="#F1F3FA"/>
-          <g fill="#151A2D">
-            <rect x="178" y="166" width="2" height="44"/><rect x="182" y="166" width="1" height="44"/><rect x="186" y="166" width="3" height="44"/><rect x="191" y="166" width="1" height="44"/><rect x="194" y="166" width="2" height="44"/><rect x="199" y="166" width="2" height="44"/><rect x="203" y="166" width="1" height="44"/><rect x="207" y="166" width="3" height="44"/><rect x="212" y="166" width="2" height="44"/><rect x="216" y="166" width="1" height="44"/><rect x="220" y="166" width="2" height="44"/><rect x="225" y="166" width="3" height="44"/><rect x="230" y="166" width="1" height="44"/><rect x="234" y="166" width="2" height="44"/><rect x="238" y="166" width="2" height="44"/><rect x="243" y="166" width="1" height="44"/><rect x="246" y="166" width="3" height="44"/><rect x="251" y="166" width="2" height="44"/><rect x="255" y="166" width="1" height="44"/><rect x="259" y="166" width="2" height="44"/><rect x="263" y="166" width="3" height="44"/><rect x="268" y="166" width="1" height="44"/><rect x="271" y="166" width="2" height="44"/><rect x="276" y="166" width="2" height="44"/><rect x="280" y="166" width="1" height="44"/><rect x="284" y="166" width="3" height="44"/><rect x="289" y="166" width="2" height="44"/><rect x="293" y="166" width="1" height="44"/>
-          </g>
-        </svg>
-        <div class="decode-meta">Stamp imagery illustrative only · Royal Mail content © Royal Mail Group Ltd</div>
+        <img class="decode-stamp real-stamp" src="assets/img/barcoded.png" alt="Example Royal Mail barcoded stamp image used under licence.">
+        <div class="decode-meta">Stamp image © Royal Mail Group Ltd. Used with permission under licence.</div>
       </div>
 
       <div class="decode-info-pane">
