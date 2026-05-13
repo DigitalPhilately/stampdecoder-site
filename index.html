@@ -237,56 +237,6 @@
   .section-head h2 { margin-top: 12px; }
   .section-head p { margin-top: 14px; font-size: 17px; color: var(--ink-2); }
 
-  /* ---------- "HALF THE STORY" REVEAL ---------- */
-  .reveal { background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .reveal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-  .reveal-stamp {
-    aspect-ratio: 4 / 3; border-radius: 14px; background: linear-gradient(160deg, #4A5A8A, #3F4E7A 55%, #2A3050);
-    position: relative; overflow: hidden; box-shadow: var(--shadow-lg);
-  }
-  .reveal-stamp .king { position: absolute; left: 20px; top: 18px; bottom: 18px; width: 38%; }
-  .reveal-stamp .king svg { width: 100%; height: 100%; opacity: .92; }
-  .reveal-stamp .val { position: absolute; top: 18px; right: 24px; color: #F1F3FA; font-size: 30px; font-weight: 800; }
-  .reveal-stamp .bc { position: absolute; right: 20px; bottom: 18px; width: 50%; height: 36%; background: #F1F3FA; border-radius: 3px; padding: 8px; }
-  .reveal-stamp .bc .bars { width: 100%; height: 100%; background: repeating-linear-gradient(to right, #151A2D 0 2px, transparent 2px 4px, #151A2D 4px 6px, transparent 6px 9px, #151A2D 9px 12px, transparent 12px 15px); }
-  .reveal-stamp::after {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background:
-      radial-gradient(circle at 0% 0, transparent 6px, #F1F3FA 6.5px) -7px -7px / 14px 14px repeat-x,
-      radial-gradient(circle at 0% 0, transparent 6px, #F1F3FA 6.5px) -7px calc(100% + 7px) / 14px 14px repeat-x,
-      radial-gradient(circle at 0% 0, transparent 6px, #F1F3FA 6.5px) -7px -7px / 14px 14px repeat-y,
-      radial-gradient(circle at 0% 0, transparent 6px, #F1F3FA 6.5px) calc(100% + 7px) -7px / 14px 14px repeat-y;
-  }
-  .reveal-list { list-style: none; padding: 0; margin: 0; }
-  .reveal-list li {
-    display: grid; grid-template-columns: 16px 130px 1fr; gap: 14px; align-items: baseline;
-    padding: 14px 0; border-bottom: 1px dashed var(--line-2);
-  }
-  .reveal-list li:last-child { border-bottom: 0; }
-  .reveal-list .bullet { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; transform: translateY(2px); }
-  .reveal-list .k { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
-  .reveal-list .v { font-size: 16.5px; color: var(--ink); }
-  .reveal-list .v strong { color: var(--accent); }
-  .licensed-stamp {
-    margin: 0;
-    padding: 28px;
-    border: 1px solid var(--line);
-    border-radius: 24px;
-    background: linear-gradient(160deg, #FFFFFF 0%, var(--chip) 100%);
-    box-shadow: var(--shadow-lg);
-  }
-  .licensed-stamp img {
-    width: 100%;
-    border-radius: 14px;
-    box-shadow: 0 16px 34px rgba(15,20,40,.14);
-  }
-  .licensed-stamp figcaption {
-    margin-top: 14px;
-    color: var(--ink-3);
-    font-size: 12.5px;
-    text-align: center;
-  }
-
   /* ---------- POSTMARK FEATURE ---------- */
   .postmark-section {
     background: #FFFFFF;
@@ -545,7 +495,7 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 960px) {
-    .hero-grid, .reveal-grid, .postmark-card { grid-template-columns: 1fr; gap: 40px; }
+    .hero-grid, .postmark-card { grid-template-columns: 1fr; gap: 40px; }
     .decode-card { grid-template-columns: 1fr 1fr; gap: 0; }
     .steps { grid-template-columns: 1fr; }
     .features { grid-template-columns: 1fr 1fr; }
@@ -638,33 +588,6 @@
   </div>
 </section>
 
-<!-- HALF THE STORY -->
-<section class="reveal" id="how">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">The pitch in one image</span>
-      <h2>Your collection has hidden information waiting to be discovered.</h2>
-      <p>Digital philately starts with the physical stamp, then adds the layer collectors could never see at a glance: barcode data, origin, dates, status, notes, and a record of what is already in your collection.</p>
-    </div>
-
-    <div class="reveal-grid">
-      <figure class="licensed-stamp">
-        <img src="assets/img/barcoded.png" alt="Example Royal Mail barcoded stamp image used under licence.">
-        <figcaption>Stamp image © Royal Mail Group Ltd. Used with permission under licence.</figcaption>
-      </figure>
-
-      <ul class="reveal-list">
-        <li><span class="bullet"></span><span class="k">What it is</span><span class="v"><strong>1st Class barcoded definitive</strong> · Plum Purple</span></li>
-        <li><span class="bullet"></span><span class="k">Print date</span><span class="v">M23L · April 2024</span></li>
-        <li><span class="bullet"></span><span class="k">Issue date</span><span class="v">4 April 2022</span></li>
-        <li><span class="bullet"></span><span class="k">Barcode gen</span><span class="v">2024-04-17 · 14:22</span></li>
-        <li><span class="bullet"></span><span class="k">Origin</span><span class="v">Sheet · Counter supply</span></li>
-        <li><span class="bullet"></span><span class="k">Note</span><span class="v">Standard counter sheet. No premium variant flag.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <!-- POSTMARK FEATURE -->
 <section class="postmark-section" id="digital-philately">
   <div class="wrap postmark-card">
@@ -686,7 +609,7 @@
 </section>
 
 <!-- 3 STEPS -->
-<section>
+<section id="how">
   <div class="wrap">
     <div class="section-head">
       <span class="kicker">How it works</span>
