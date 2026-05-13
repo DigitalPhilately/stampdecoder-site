@@ -287,6 +287,67 @@
     text-align: center;
   }
 
+  /* ---------- POSTMARK FEATURE ---------- */
+  .postmark-section {
+    background: #FFFFFF;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .postmark-card {
+    display: grid;
+    grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
+    gap: 44px;
+    align-items: center;
+  }
+  .postmark-image {
+    margin: 0;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    background: linear-gradient(160deg, #FFFFFF 0%, var(--paper-2) 100%);
+    box-shadow: var(--shadow);
+  }
+  .postmark-image img {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 16px 34px rgba(15,20,40,.12);
+  }
+  .postmark-image figcaption {
+    margin-top: 14px;
+    color: var(--ink-3);
+    font-size: 12.5px;
+    text-align: center;
+  }
+  .postmark-copy h2 {
+    max-width: 620px;
+  }
+  .postmark-copy p {
+    max-width: 650px;
+    margin-top: 16px;
+    color: var(--ink-2);
+    font-size: 18px;
+  }
+  .postmark-note {
+    margin-top: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: var(--chip);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .postmark-note svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+  }
+
   /* ---------- STEPS ---------- */
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .step {
@@ -484,7 +545,7 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 960px) {
-    .hero-grid, .reveal-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-grid, .reveal-grid, .postmark-card { grid-template-columns: 1fr; gap: 40px; }
     .decode-card { grid-template-columns: 1fr 1fr; gap: 0; }
     .steps { grid-template-columns: 1fr; }
     .features { grid-template-columns: 1fr 1fr; }
@@ -549,7 +610,7 @@
       <span class="eyebrow"><span class="dot"></span> Digital Philately</span>
       <h1>Scan, identify, and collect modern GB barcoded stamps.</h1>
       <p class="subhook">Up to now, you've only collected half the story.</p>
-      <p class="lede">Modern GB Stamp Decoder turns the barcode on your Royal Mail stamps into plain-English collector detail — issue, value, dates, origin, and notes — then helps you track what you own.</p>
+      <p class="lede">Modern GB Stamp Decoder turns the barcode on your Royal Mail stamps into plain-English collector detail — issue, value, dates, origin, and notes — then helps you build a digital stamp collection around the objects you own.</p>
 
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#cta">Join the beta
@@ -582,8 +643,8 @@
   <div class="wrap">
     <div class="section-head">
       <span class="kicker">The pitch in one image</span>
-      <h2>Up to now, you've only collected half the story.</h2>
-      <p>Every modern GB stamp carries a barcode with hidden detail. We make it readable — without you needing a catalogue, a magnifier, or a back-issue subscription.</p>
+      <h2>Your collection has hidden information waiting to be discovered.</h2>
+      <p>Digital philately starts with the physical stamp, then adds the layer collectors could never see at a glance: barcode data, origin, dates, status, notes, and a record of what is already in your collection.</p>
     </div>
 
     <div class="reveal-grid">
@@ -600,6 +661,26 @@
         <li><span class="bullet"></span><span class="k">Origin</span><span class="v">Sheet · Counter supply</span></li>
         <li><span class="bullet"></span><span class="k">Note</span><span class="v">Standard counter sheet. No premium variant flag.</span></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- POSTMARK FEATURE -->
+<section class="postmark-section" id="digital-philately">
+  <div class="wrap postmark-card">
+    <figure class="postmark-image">
+      <img src="assets/img/digital-philately-postmark.jpg" alt="Sponsored Digital Philately London N1 postmark on a modern GB barcoded stamp.">
+      <figcaption>Sponsored Digital Philately postmark · London N1 · 26 Mar 2026</figcaption>
+    </figure>
+
+    <div class="postmark-copy">
+      <span class="kicker">Digital Philately</span>
+      <h2>A postmark for the barcode era.</h2>
+      <p>The sponsored cancel makes the idea tangible: digital philately is still philately, just with a richer record attached. Scan the physical item, decode the hidden data, then keep the stamp and its collector context together.</p>
+      <div class="postmark-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V5a1 1 0 011-1h4"/><path d="M15 4h4a1 1 0 011 1v4"/><path d="M20 15v4a1 1 0 01-1 1h-4"/><path d="M9 20H5a1 1 0 01-1-1v-4"/><circle cx="12" cy="12" r="3"/></svg>
+        Physical cover, digital collection record
+      </div>
     </div>
   </div>
 </section>
@@ -651,8 +732,8 @@
       </div>
       <div class="feature">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div>
-        <h3>My Collection</h3>
-        <p>Mark Mint or Used, see at a glance what you own, and what's still missing from a set.</p>
+        <h3>Digital stamp collection</h3>
+        <p>Mark Mint or Used, see at a glance what you own, and keep the barcode story attached to the stamp.</p>
       </div>
       <div class="feature">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
@@ -667,7 +748,7 @@
       <div class="feature">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
         <h3>Yours, on your device</h3>
-        <p>No accounts. No cloud sync without you asking. No analytics. Your collection stays yours.</p>
+        <p>No accounts. No cloud sync without you asking. No analytics. Your digital collection stays yours.</p>
       </div>
     </div>
   </div>
