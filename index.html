@@ -51,7 +51,7 @@
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
 
   h1, h2, h3 { font-family: "SF Pro Display", "Avenir Next", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 800; letter-spacing: -.02em; line-height: 1.08; margin: 0; }
-  h1 { font-size: clamp(44px, 6.2vw, 76px); letter-spacing: -.04em; }
+  h1 { font-size: clamp(34px, 4.7vw, 58px); letter-spacing: -.032em; }
   h2 { font-size: clamp(28px, 3.4vw, 44px); }
   h3 { font-size: 20px; }
   p  { margin: 0; color: var(--ink-2); }
@@ -117,7 +117,7 @@
     font-size: 12.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
   }
   .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-  .hero h1 { margin-top: 18px; max-width: 680px; }
+  .hero h1 { margin-top: 18px; max-width: 640px; }
   .hero .subhook {
     margin-top: 20px;
     color: var(--ink-3);
@@ -361,11 +361,11 @@
     background: var(--card); border: 1px solid var(--line); border-radius: 24px;
     box-shadow: var(--shadow-lg);
     overflow: hidden;
-    display: grid; grid-template-columns: .9fr 1.1fr;
+    display: grid; grid-template-columns: .78fr .74fr 1.1fr;
   }
   .decode-stamp-pane {
     background: linear-gradient(160deg, #FFFFFF 0%, var(--chip) 100%);
-    padding: 48px; display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 34px; display: flex; flex-direction: column; justify-content: center; align-items: center;
     border-right: 1px solid var(--line);
   }
   .decode-stamp { width: 100%; max-width: 320px; }
@@ -375,6 +375,34 @@
     box-shadow: 0 16px 34px rgba(15,20,40,.14);
   }
   .decode-meta { color: var(--ink-3); font-size: 13px; margin-top: 16px; text-align: center; }
+  .decode-screen-pane {
+    padding: 34px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-right: 1px solid var(--line);
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--paper-2) 100%);
+  }
+  .decode-screen-shot {
+    width: min(100%, 210px);
+    overflow: hidden;
+    border: 1px solid var(--line-2);
+    border-radius: 24px;
+    background: #11131A;
+    box-shadow: var(--shadow);
+  }
+  .decode-screen-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .decode-screen-label {
+    color: var(--ink-3);
+    font-size: 12.5px;
+    text-align: center;
+  }
   .decode-info-pane { padding: 40px 44px; }
   .decode-info-pane .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
   .decode-info-pane .top h3 { font-size: 26px; font-weight: 850; }
@@ -456,12 +484,16 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 960px) {
-    .hero-grid, .reveal-grid, .decode-card { grid-template-columns: 1fr; gap: 40px; }
+    .hero-grid, .reveal-grid { grid-template-columns: 1fr; gap: 40px; }
+    .decode-card { grid-template-columns: 1fr 1fr; gap: 0; }
     .steps { grid-template-columns: 1fr; }
     .features { grid-template-columns: 1fr 1fr; }
     .screen-grid { grid-template-columns: 1fr; }
     .audience { grid-template-columns: 1fr 1fr; }
-    .decode-stamp-pane { padding: 36px; border-right: 0; border-bottom: 1px solid var(--line); }
+    .decode-stamp-pane,
+    .decode-screen-pane { padding: 36px; border-right: 0; border-bottom: 1px solid var(--line); }
+    .decode-stamp-pane { border-right: 1px solid var(--line); }
+    .decode-info-pane { grid-column: 1 / -1; }
     .decode-info-pane { padding: 32px; }
     .final-cta { padding: 44px 32px; border-radius: 22px; }
     section { padding: 60px 0; }
@@ -474,6 +506,9 @@
     .features { grid-template-columns: 1fr; }
     .audience { grid-template-columns: 1fr; }
     .decode-row { grid-template-columns: 1fr; gap: 2px; padding: 10px 0; }
+    .decode-card { grid-template-columns: 1fr; }
+    .decode-stamp-pane { border-right: 0; }
+    .decode-info-pane { grid-column: auto; }
     .hero { padding: 40px 0 20px; }
     .wrap { padding: 0 18px; }
     .nav-inner { gap: 12px; padding-top: 18px; }
@@ -678,6 +713,13 @@
       <div class="decode-stamp-pane">
         <img class="decode-stamp real-stamp" src="assets/img/barcoded.png" alt="Example Royal Mail barcoded stamp image used under licence.">
         <div class="decode-meta">Stamp image © Royal Mail Group Ltd. Used with permission under licence.</div>
+      </div>
+
+      <div class="decode-screen-pane">
+        <div class="decode-screen-shot">
+          <img src="assets/img/app-decode-result.png" alt="StampDecoder app Decode screen showing the scanned stamp result fields.">
+        </div>
+        <div class="decode-screen-label">Real Decode screen from the app</div>
       </div>
 
       <div class="decode-info-pane">
