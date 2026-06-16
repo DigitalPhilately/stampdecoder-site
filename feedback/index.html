@@ -31,7 +31,7 @@
     <main class="panel">
       <h1 class="pageTitle">Feedback</h1>
       <p class="pageIntro">
-        Tell me what you’d like improved, or paste a barcode string if a Decode result, My Collection entry, or label looks odd.
+        Tell me what you’d like improved, ask a support question, or paste a barcode string if a Decode result, My Collection entry, or label looks odd.
         This site doesn’t use tracking. Feedback is sent via email to
         <a href="mailto:beta@stampdecoder.app">beta@stampdecoder.app</a>.
       </p>
@@ -43,8 +43,8 @@
             <option value="General feedback">General feedback</option>
             <option value="Bug report">Bug report</option>
             <option value="Feature request">Feature request</option>
-            <option value="Beta / early access">Beta / early access</option>
-            <option value="Launch notification">Notify me on launch</option>
+            <option value="App support">App support</option>
+            <option value="Android release updates">Android release updates</option>
           </select>
         </div>
 
@@ -69,9 +69,7 @@
           <a class="btn" href="mailto:beta@stampdecoder.app?subject=Modern%20GB%20Stamp%20Decoder%20-%20Feedback">Email without form</a>
         </div>
 
-        <p class="note">
-          When the app goes live, this page can be upgraded to a proper form (Formspree/Netlify etc.) without changing the design.
-        </p>
+        <p class="note">This page opens your email app with the details filled in so you can send support, bug reports, or Android update requests quickly.</p>
       </div>
     </main>
 
@@ -84,12 +82,12 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Prefill topic from querystring (?intent=notify or ?intent=beta)
+    // Prefill topic from querystring
     const qs = new URLSearchParams(location.search);
     const intent = (qs.get("intent") || "").toLowerCase();
     const topic = document.getElementById("topic");
-    if (intent === "notify") topic.value = "Launch notification";
-    if (intent === "beta") topic.value = "Beta / early access";
+    if (intent === "notify" || intent === "android") topic.value = "Android release updates";
+    if (intent === "beta") topic.value = "General feedback";
 
     function enc(s){ return encodeURIComponent(s || ""); }
 
