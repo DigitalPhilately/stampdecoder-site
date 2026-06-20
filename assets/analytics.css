@@ -1,0 +1,125 @@
+.analytics-consent[hidden] {
+  display: none;
+}
+
+.analytics-consent {
+  position: fixed;
+  z-index: 1000;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 18px;
+  color: #151A2D;
+  background: #FFFFFF;
+  border: 1px solid rgba(23,29,55,.20);
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(15,20,40,.18);
+  font-family: "Avenir Next", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.analytics-consent__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.analytics-consent__copy {
+  max-width: 520px;
+}
+
+.analytics-consent__copy strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.analytics-consent__copy p {
+  margin: 0;
+  color: #5E647C;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.analytics-consent__copy a {
+  color: #334064;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.analytics-consent__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.analytics-consent button,
+.analytics-settings {
+  font: inherit;
+}
+
+.analytics-consent button {
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid rgba(23,29,55,.20);
+  border-radius: 10px;
+  color: #151A2D;
+  background: #FFFFFF;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.analytics-consent button[data-analytics-accept] {
+  color: #FFFFFF;
+  background: #3F4E7A;
+  border-color: #3F4E7A;
+}
+
+.analytics-consent button:hover {
+  background: #F1F3FA;
+}
+
+.analytics-consent button[data-analytics-accept]:hover {
+  background: #334064;
+}
+
+.analytics-consent button:focus-visible,
+.analytics-settings:focus-visible {
+  outline: 2px solid #3F4E7A;
+  outline-offset: 2px;
+}
+
+.analytics-settings {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .analytics-consent {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .analytics-consent__inner {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .analytics-consent__actions {
+    width: 100%;
+  }
+
+  .analytics-consent button {
+    flex: 1;
+  }
+}

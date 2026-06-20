@@ -10,6 +10,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/analytics.css">
+  <script src="/assets/analytics.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -44,7 +46,7 @@
             <option value="Bug report">Bug report</option>
             <option value="Feature request">Feature request</option>
             <option value="App support">App support</option>
-            <option value="Android release updates">Android release updates</option>
+            <option value="Android open-test feedback">Android open-test feedback</option>
           </select>
         </div>
 
@@ -69,13 +71,13 @@
           <a class="btn" href="mailto:beta@stampdecoder.app?subject=Modern%20GB%20Stamp%20Decoder%20-%20Feedback">Email without form</a>
         </div>
 
-        <p class="note">This page opens your email app with the details filled in so you can send support, bug reports, or Android update requests quickly.</p>
+        <p class="note">This page opens your email app with the details filled in so you can send support, bug reports, or Android open-test feedback quickly.</p>
       </div>
     </main>
 
     <footer class="footer">
       <div>© <span id="y"></span> StampDecoder.app</div>
-      <div><a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/support/">Support</a></div>
+      <div><a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/support/">Support</a> · <button class="analytics-settings" type="button" data-analytics-settings>Cookie settings</button></div>
     </footer>
   </div>
 
@@ -86,7 +88,7 @@
     const qs = new URLSearchParams(location.search);
     const intent = (qs.get("intent") || "").toLowerCase();
     const topic = document.getElementById("topic");
-    if (intent === "notify" || intent === "android") topic.value = "Android release updates";
+    if (intent === "notify" || intent === "android") topic.value = "Android open-test feedback";
     if (intent === "beta") topic.value = "General feedback";
 
     function enc(s){ return encodeURIComponent(s || ""); }

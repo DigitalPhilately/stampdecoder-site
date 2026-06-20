@@ -10,6 +10,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/analytics.css">
+  <script src="/assets/analytics.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -31,14 +33,15 @@
     <main class="panel">
       <h1 class="pageTitle">Privacy Policy</h1>
       <p class="pageIntro">
-        Last updated: <strong>2026-05-06</strong>
+        Last updated: <strong>2026-06-20</strong>
       </p>
 
       <div class="section">
         <h2>Summary</h2>
         <ul>
           <li>No account required</li>
-          <li>No analytics and no tracking</li>
+          <li>No analytics or tracking in the app</li>
+          <li>Optional Google Analytics on this website, used only after you accept analytics cookies</li>
           <li>Barcode decoding is performed on-device</li>
           <li>My Collection/checklist data is stored locally on your device (including saved Mint/Used ownership states)</li>
           <li>If you email support, we receive your email and message</li>
@@ -48,7 +51,7 @@
       <div class="section">
         <h2>Information we process</h2>
         <p>
-          The app processes Datamatrix barcode strings on your device to decode and display
+          The app processes DataMatrix barcode strings on your device to decode and display
           the information contained in the barcode.
         </p>
         <p>
@@ -58,7 +61,25 @@
           If you use collection/checklist features, that data is stored locally on your device as part of normal app use. Label previews are also generated locally on-device.
         </p>
         <p class="note">
-          Technical note: the app supports Royal Mail JGB-format barcodes.
+          Technical note: the app supports the DataMatrix barcodes printed on modern Royal Mail stamps.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Website analytics and cookies</h2>
+        <p>
+          StampDecoder.app uses Google Analytics 4 to help us understand website visits and which pages are useful.
+          Google Analytics is optional and does not load until you select <strong>Accept analytics</strong> in the website banner.
+        </p>
+        <p>
+          If you accept, Google Analytics may process information about the pages you visit, how you reached the site,
+          and your browser or device. Analytics cookies may be stored on your device. We have disabled Google Signals
+          and advertising personalisation in our site configuration.
+        </p>
+        <p>
+          Your choice is stored in your browser so we can remember it. You can reject analytics or change your choice
+          at any time using <a href="/?cookie-settings=1">Cookie settings</a>.
+          See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> for information about Google's processing.
         </p>
       </div>
 
@@ -74,7 +95,8 @@
       <div class="section">
         <h2>Third-party services</h2>
         <p>
-          We do not use third-party analytics in the app at this time.
+          We do not use third-party analytics in the app. This website uses Google Analytics only after you consent,
+          as described above.
         </p>
       </div>
 
@@ -92,6 +114,10 @@
           You can stop using the app at any time. If the app stores any data locally on your device (for example,
           user preferences), removing the app will remove that local data.
         </p>
+        <p>
+          For the website, you can reject analytics when first asked or revisit <a href="/?cookie-settings=1">Cookie settings</a>
+          to change your choice.
+        </p>
       </div>
 
       <div class="section">
@@ -104,7 +130,7 @@
 
     <footer class="footer">
       <div>© <span id="y"></span> StampDecoder.app</div>
-      <div><a href="/">Home</a> · <a href="/support/">Support</a> · <a href="/terms/">Terms</a> · <a href="/feedback/">Feedback</a></div>
+      <div><a href="/">Home</a> · <a href="/support/">Support</a> · <a href="/terms/">Terms</a> · <a href="/feedback/">Feedback</a> · <button class="analytics-settings" type="button" data-analytics-settings>Cookie settings</button></div>
     </footer>
   </div>
 

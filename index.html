@@ -4,11 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>StampDecoder.app — Modern GB Stamp Decoder</title>
-<meta name="description" content="Scan a Royal Mail barcoded stamp and instantly see what it is — issue, value, colour, dates, origin and collector notes. Track your collection. No accounts. No tracking." />
+<meta name="description" content="Scan a Royal Mail barcoded stamp and instantly see what it is — issue, value, colour, dates, origin and collector notes. Track your collection. No account required." />
 <link rel="icon" href="assets/img/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/analytics.css">
+<script src="assets/analytics.js" defer></script>
 <style>
   :root {
     /* Aligned with stampdecoder.app brand palette */
@@ -576,8 +578,8 @@
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Live on the App Store</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Android open test</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> No accounts</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> No tracking</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> No analytics</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> No tracking in the app</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> No app analytics</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Works offline</span>
       </div>
     </div>
@@ -656,7 +658,7 @@
       <div class="feature">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
         <h3>Yours, on your device</h3>
-        <p>No accounts. No cloud sync without you asking. No analytics. Your collection stays yours.</p>
+        <p>The app has no accounts, analytics or cloud sync without you asking. Your collection stays yours.</p>
       </div>
     </div>
   </div>
@@ -816,7 +818,7 @@
       </details>
       <details>
         <summary>Do you collect any data about me?</summary>
-        <p>No accounts, no analytics, no tracking. Your scans, your collection, your labels — they live on your device unless you explicitly export them.</p>
+        <p>The app has no accounts, analytics or tracking. Your scans, collection and labels live on your device unless you explicitly export them. This website uses optional Google Analytics only if you accept analytics cookies.</p>
       </details>
       <details>
         <summary>Is there a premium tier?</summary>
@@ -878,6 +880,7 @@
       <a href="https://stampdecoder.app/terms/">Terms</a>
       <a href="https://stampdecoder.app/support/">Support & FAQ</a>
       <a href="https://stampdecoder.app/feedback/">Feedback</a>
+      <button class="analytics-settings" type="button" data-analytics-settings>Cookie settings</button>
     </div>
   </div>
 </footer>
