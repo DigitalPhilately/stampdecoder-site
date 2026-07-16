@@ -77,7 +77,7 @@
       '<div class="analytics-consent__inner">' +
         '<div class="analytics-consent__copy">' +
           '<strong>Help us understand website visits?</strong>' +
-          '<p>With your permission, we use Google Analytics to count visits and see which pages are useful. The app itself has no analytics or tracking. <a href="/privacy/">Privacy details</a>.</p>' +
+          '<p>With your permission, we use Google Analytics to count website visits. Separately, the app uses anonymous successful-scan counts without barcode strings, images or collection contents. Neither is used for advertising or cross-app tracking. <a href="/privacy/">Privacy details</a>.</p>' +
         '</div>' +
         '<div class="analytics-consent__actions">' +
           '<button type="button" data-analytics-reject>Reject</button>' +
