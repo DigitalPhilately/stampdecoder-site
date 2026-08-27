@@ -316,6 +316,7 @@
 
   /* ---------- FEATURE GRID ---------- */
   .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .features.testflight-grid { grid-template-columns: repeat(2, 1fr); }
   .feature {
     background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
     padding: 26px;
@@ -519,6 +520,7 @@
   @media (max-width: 560px) {
     .postmark-card { grid-template-columns: 1fr; gap: 18px; }
     .features { grid-template-columns: 1fr; }
+    .features.testflight-grid { grid-template-columns: 1fr; }
     .audience { grid-template-columns: 1fr; }
     .decode-row { grid-template-columns: 1fr; gap: 2px; padding: 10px 0; }
     .decode-card { grid-template-columns: 1fr; }
@@ -608,7 +610,7 @@
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 012-2h2M21 7V5a2 2 0 00-2-2h-2M3 17v2a2 2 0 002 2h2M21 17v2a2 2 0 01-2 2h-2"/><path d="M3 12h18"/></svg></div>
         <div class="num">STEP 01</div>
         <h3>Scan</h3>
-        <p>Point your camera at the stamp barcode on any modern GB stamp. Reads through plastic mounts and album sleeves.</p>
+        <p>Point your camera at the stamp barcode on a modern GB stamp. It can often read through clear mounts and sleeves, although glare or curved plastic may affect scanning.</p>
       </div>
       <div class="step">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
@@ -653,12 +655,41 @@
       <div class="feature">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.8 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg></div>
         <h3>More detail when needed</h3>
-        <p>Use the built-in MGB reference today, with more collector tools planned for Pro.</p>
+        <p>Use the built-in MGB reference in the free app, with Pro available for collectors who want the additional catalogue detail.</p>
       </div>
       <div class="feature">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
         <h3>Yours, on your device</h3>
-        <p>Barcode contents, camera images and your collection stay on-device. Anonymous successful-scan counts help us improve the app.</p>
+        <p>Barcode contents, camera images and your collection stay on-device. Privacy-light product analytics help us improve the app; they never include the barcode, image or collection contents.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTFLIGHT CATALOGUE UPDATE -->
+<section style="padding-top: 20px;" id="next-update">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Currently in TestFlight</span>
+      <h2>The stamp — and the thing it came from.</h2>
+      <p>The next catalogue update treats booklets, business sheets, prestige panes and collector sheets as collectable objects in their own right. These features are in testing and are not yet in the public App Store or Google Play release.</p>
+    </div>
+    <div class="features testflight-grid">
+      <div class="feature">
+        <h3>Permanent object references</h3>
+        <p>67 physical products now have locked QO or KO identities, separate from the MGB references of the stamps they contain.</p>
+      </div>
+      <div class="feature">
+        <h3>Contents you can see</h3>
+        <p>See the values, quantities, colours and design names of the stamps contained in a booklet, pane or sheet.</p>
+      </div>
+      <div class="feature">
+        <h3>Evidence from your copy</h3>
+        <p>Guided checks distinguish facts about the stamp from characteristics of the object, such as its crown, lettering, panel and backing paper.</p>
+      </div>
+      <div class="feature">
+        <h3>Your observation stays yours</h3>
+        <p>If your copy differs from the catalogue, the app records your observation first. Reporting it for review remains optional.</p>
       </div>
     </div>
   </div>
@@ -717,7 +748,7 @@
         <div class="top">
           <div>
             <h3>1st Class Definitive</h3>
-            <div class="sub">Barcoded Machin · KCIII era · Plum Purple</div>
+            <div class="sub">Barcoded Machin · KCIII · Plum Purple</div>
           </div>
           <span class="pill"><span class="d"></span> Mint · Owned</span>
         </div>
@@ -725,12 +756,14 @@
         <div class="decode-rows">
           <div class="decode-row"><span class="k">Value</span><span class="v">1<sup>st</sup> Class</span></div>
           <div class="decode-row"><span class="k">Colour</span><span class="v">Plum Purple</span></div>
-          <div class="decode-row"><span class="k">Print / pack date</span><span class="v">M23L · April 2024</span></div>
-          <div class="decode-row"><span class="k">Issue date</span><span class="v">4 April 2022</span></div>
-          <div class="decode-row"><span class="k">Barcode generated</span><span class="v muted">2024-04-17 · 14:22</span></div>
-          <div class="decode-row"><span class="k">Origin</span><span class="v">Sheet · Counter supply</span></div>
-          <div class="decode-row"><span class="k">MGB Ref.</span><span class="v">MGB Q007-B8</span></div>
-          <div class="decode-row"><span class="k">Note</span><span class="v note">Standard counter sheet. No premium variant flag.</span></div>
+          <div class="decode-row"><span class="k">Variant year</span><span class="v">M26L · derived 2026</span></div>
+          <div class="decode-row"><span class="k">Pack date</span><span class="v">16 February 2026</span></div>
+          <div class="decode-row"><span class="k">Issue date</span><span class="v">20 March 2026</span></div>
+          <div class="decode-row"><span class="k">Barcode date</span><span class="v muted">16 January 2026</span></div>
+          <div class="decode-row"><span class="k">Origin</span><span class="v">Retail booklet · book of four</span></div>
+          <div class="decode-row"><span class="k">MGB stamp</span><span class="v">K093-B4</span></div>
+          <div class="decode-row"><span class="k">Source object <small>(TestFlight)</small></span><span class="v">KO049-B4</span></div>
+          <div class="decode-row"><span class="k">Note</span><span class="v note">Text-change booklet; Tudor Crown, block lettering and Relay UK panel.</span></div>
         </div>
 
         <div class="decode-actions">
@@ -758,7 +791,7 @@
       <div class="aud">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="4"/><path d="M6 21c0-4 3-6 6-6s6 2 6 6"/></svg></span>
         <h4>Barcoded Machins</h4>
-        <p>The full barcoded definitive family — from the 2022 changeover onward.</p>
+        <p>The barcoded definitive family — from the 2021 trials and full 2022 rollout onward.</p>
       </div>
       <div class="aud">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21h14M7 21V9l5-5 5 5v12M10 21V14h4v7"/></svg></span>
@@ -810,7 +843,7 @@
     <div class="faq">
       <details open>
         <summary>What barcode format does it read?</summary>
-        <p>Royal Mail stamp barcodes, also known as DataMatrix barcodes — the ones printed on modern GB barcoded stamps from the 2022 changeover onward, including KCIII definitives, regional issues and Christmas stamps.</p>
+        <p>Royal Mail stamp barcodes, also known as DataMatrix barcodes — including the 2021 trials, the full 2022 rollout, KCIII definitives, regional issues and Christmas stamps.</p>
       </details>
       <details>
         <summary>Does it work offline?</summary>
@@ -818,11 +851,11 @@
       </details>
       <details>
         <summary>Do you collect any data about me?</summary>
-        <p>The app does not use advertising or cross-app tracking. It sends anonymous successful-camera-scan events to PostHog, without barcode strings, images or collection contents. This website uses optional Google Analytics only if you accept analytics cookies.</p>
+        <p>The app does not use advertising or cross-app tracking. It sends privacy-light product-usage events to PostHog, without barcode strings, images, stamp or object record IDs, notes or collection contents. This website uses optional Google Analytics only if you accept analytics cookies. See the privacy policy for the full detail.</p>
       </details>
       <details>
         <summary>Is there a premium tier?</summary>
-        <p>The core scan, decode and collection tools are free. Pro will add extra collector tools for people who want more detail and easier export. You'll see exactly what's included before you opt in.</p>
+        <p>The core scan, decode and collection tools are free. Pro is available for collectors who want the additional catalogue detail; the app shows exactly what is included before you opt in.</p>
       </details>
       <details>
         <summary>Where can I get it?</summary>

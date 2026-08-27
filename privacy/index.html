@@ -33,7 +33,7 @@
     <main class="panel">
       <h1 class="pageTitle">Privacy Policy</h1>
       <p class="pageIntro">
-        Last updated: <strong>2026-07-16</strong>
+        Last updated: <strong>2026-08-27</strong>
       </p>
 
       <div class="section">
@@ -41,11 +41,11 @@
         <ul>
           <li>No account required</li>
           <li>No advertising, data brokering, or cross-app tracking</li>
-          <li>PostHog receives anonymous successful-camera-scan events so we can understand whether the app is being used</li>
+          <li>PostHog receives privacy-light product-usage events so we can understand how the app is working</li>
           <li>Optional Google Analytics on this website, used only after you accept analytics cookies</li>
           <li>Barcode decoding is performed on-device; barcode contents and camera images are not sent to us automatically</li>
           <li>My Collection/checklist data is stored locally on your device (including saved Mint/Used ownership states)</li>
-          <li>If subscriptions are enabled, RevenueCat may receive privacy-light app functionality flags such as successful scan/decode status, product type, checklist-match status, and scan count</li>
+          <li>RevenueCat may receive an anonymous app user ID, purchase status and privacy-light app functionality flags for subscriptions and in-app features</li>
           <li>If you email support, we receive your email and message</li>
         </ul>
       </div>
@@ -53,20 +53,22 @@
       <div class="section">
         <h2>Anonymous app analytics</h2>
         <p>
-          The app uses <a href="https://posthog.com/privacy">PostHog EU Cloud</a> to count successful camera scans and understand
-          general feature use. For a successful scan, the app may send anonymous event, installation and session identifiers;
-          product type; camera source; app and catalogue version; whether the result matched the built-in checklist; and basic
-          technical context supplied by the SDK, such as platform, operating-system version, device model/type, locale,
-          timezone and network connection type. As with any internet request, PostHog also receives the network address used
-          to deliver the event.
+          The app uses <a href="https://posthog.com/privacy">PostHog EU Cloud</a> to understand whether important app journeys
+          are working. Events cover app opens, decode attempts and outcomes, Collector Check steps, and Pro or paywall surfaces.
+          They may include anonymous installation and session identifiers; coarse operational properties such as product type,
+          match status, whether reference data was available, app and catalogue version, and free-check status; and basic technical
+          context supplied by the SDK, such as platform, operating-system version, device model/type, locale, timezone and network
+          connection type. As with any internet request, PostHog receives the network address used to deliver the event. We do not
+          request GPS or precise-location permission for analytics, and PostHog location enrichment is disabled.
         </p>
         <p>
-          PostHog does not receive the barcode string, stamp or camera image, My Collection/checklist contents, label contents,
-          name, email address, RevenueCat App User ID, or subscription status from these events. Person profiles, automatic
-          screen or interaction capture, session recording, and advertising tracking are disabled.
+          PostHog does not receive the barcode string, stamp or camera image, stamp or object record ID, My Collection/checklist
+          contents, collector observations or notes, label contents, name, email address, RevenueCat App User ID, or subscription
+          status from these events. Persistent person profiles, automatic screen or interaction capture, session recording,
+          surveys, feature flags, and advertising tracking are disabled.
         </p>
         <p>
-          We use these aggregate events only to measure real scanner use, monitor adoption, and decide which app features and
+          We use these aggregate events only to monitor reliability, understand adoption, and decide which app features and
           reference data need improvement. We do not use them for advertising or to track activity across other companies'
           apps or websites.
         </p>
@@ -134,7 +136,7 @@
         <h2>Third-party services</h2>
         <p>
           We do not use advertising analytics, data brokers, or cross-app tracking in the app. The app uses PostHog EU Cloud
-          for anonymous successful-scan analytics and RevenueCat for subscription and app-functionality support, as described
+          for privacy-light product analytics and RevenueCat for subscription and app-functionality support, as described
           above. This website uses Google Analytics only after you consent, as described above.
         </p>
       </div>

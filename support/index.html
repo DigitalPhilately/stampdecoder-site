@@ -41,8 +41,9 @@
       <div class="section">
         <h2>Quick help</h2>
         <ul>
-          <li><strong>Camera won’t scan:</strong> improve lighting, wipe lens, hold steady, try slightly further away.</li>
-          <li><strong>Nothing happens:</strong> check camera permission in Settings.</li>
+          <li><strong>Camera won’t scan:</strong> improve lighting, wipe the lens, hold steady and try slightly further away. Glare or curved plastic can make a barcode harder to read.</li>
+          <li><strong>Camera permission is off:</strong> open your phone’s Settings, find Stamp Decoder and allow Camera access, then reopen the app. Reinstalling should not be your first fix.</li>
+          <li><strong>The scanner still will not start:</strong> paste the barcode text into Decode if you have it, then send us your phone model and operating-system version.</li>
           <li><strong>Decode looks incomplete:</strong> some fields vary by issue or may be “not yet known”. Not every field is meaningful on every stamp.</li>
         </ul>
       </div>
@@ -65,8 +66,8 @@
 
       <div class="section">
         <h2>References and premium fields</h2>
-        <p><strong>What is Stamp No.?</strong><br/>
-          Stamp No. is the app’s own built-in collector reference. It is intended to stay stable across your collection.
+        <p><strong>What is an MGB reference?</strong><br/>
+          MGB is the app’s own built-in collector reference. A stamp reference is intended to stay stable across your collection.
         </p>
         <p><strong>Why don’t I always see MBPC or SG?</strong><br/>
           MBPC and SG catalogue numbers are premium catalogue layers. They only appear when the relevant access is enabled.
@@ -77,13 +78,27 @@
       </div>
 
       <div class="section">
+        <h2>Currently in TestFlight</h2>
+        <p>
+          The next catalogue update adds separate, permanent QO and KO references for physical products such as booklets,
+          business sheets, prestige panes and collector sheets. It also shows the stamps contained in each object and guides
+          collectors through physical checks such as crown, lettering, contact panel and backing paper.
+        </p>
+        <p>
+          If your copy differs from the catalogue, your observation is saved to your collection first. Sending it to us for
+          review is a separate, optional step. These features are still being tested and are not yet in the public store release.
+        </p>
+      </div>
+
+      <div class="section">
         <h2>FAQ</h2>
         <p><strong>Is this an official Royal Mail app?</strong><br/>
           No. Modern GB Stamp Decoder is an independent collector tool and is not affiliated with Royal Mail.
         </p>
         <p><strong>Do you track users?</strong><br/>
-          The app does not use advertising or cross-app tracking. It sends anonymous successful-camera-scan events to PostHog
-          so we can measure real scanner use; barcode strings, images and collection contents are not included.
+          The app does not use advertising or cross-app tracking. It sends privacy-light product-usage events to PostHog so we
+          can monitor reliability and feature use; barcode strings, images, stamp or object record IDs, notes and collection
+          contents are not included. See the privacy policy for the full detail.
         </p>
         <p><strong>Does the app keep a collection?</strong><br/>
           Yes. The app now includes a checklist-led My Collection flow so you can mark what you own, see what is missing, and track progress clearly.
