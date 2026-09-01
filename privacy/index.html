@@ -33,44 +33,50 @@
     <main class="panel">
       <h1 class="pageTitle">Privacy Policy</h1>
       <p class="pageIntro">
-        Last updated: <strong>2026-08-27</strong>
+        Last updated: <strong>2026-09-01</strong>
       </p>
 
       <div class="section">
         <h2>Summary</h2>
         <ul>
-          <li>No account required</li>
+          <li>No collection account is required; cloud collection synchronisation is not included in version 5.1.1</li>
           <li>No advertising, data brokering, or cross-app tracking</li>
-          <li>PostHog receives privacy-light product-usage events so we can understand how the app is working</li>
+          <li>PostHog receives limited product-usage events, installation/session identifiers and technical context so we can understand how the app is working</li>
           <li>Optional Google Analytics on this website, used only after you accept analytics cookies</li>
           <li>Barcode decoding is performed on-device; barcode contents and camera images are not sent to us automatically</li>
-          <li>My Collection/checklist data is stored locally on your device (including saved Mint/Used ownership states)</li>
-          <li>RevenueCat may receive an anonymous app user ID, purchase status and privacy-light app functionality flags for subscriptions and in-app features</li>
+          <li>Your digital collection, checklist and saved observations are stored locally on your device</li>
+          <li>RevenueCat processes purchases, a generated app user ID and limited app-usage attributes for subscriptions and in-app features</li>
           <li>If you email support, we receive your email and message</li>
         </ul>
       </div>
 
       <div class="section">
-        <h2>Anonymous app analytics</h2>
+        <h2>App usage analytics</h2>
         <p>
           The app uses <a href="https://posthog.com/privacy">PostHog EU Cloud</a> to understand whether important app journeys
-          are working. Events cover app opens, decode attempts and outcomes, Collector Check steps, and Pro or paywall surfaces.
-          They may include anonymous installation and session identifiers; coarse operational properties such as product type,
-          match status, whether reference data was available, app and catalogue version, and free-check status; and basic technical
-          context supplied by the SDK, such as platform, operating-system version, device model/type, locale, timezone and network
-          connection type. As with any internet request, PostHog receives the network address used to deliver the event. We do not
-          request GPS or precise-location permission for analytics, and PostHog location enrichment is disabled.
+          are working. Events cover app opens, decode attempts and outcomes, Collector Check steps, saving collection items,
+          reaching the free collection limit and responding to it, opening report actions, and viewing Pro or subscription screens.
+          They may include installation and session identifiers; product type, match status, whether reference data was available,
+          free-check allowance, whether Pro is active, a broad collection-size band, app and catalogue versions; and technical
+          context supplied by the SDK, such as platform, operating-system version, device model/type, locale and timezone.
+          These identifiers can associate events from the same app installation.
         </p>
         <p>
           PostHog does not receive the barcode string, stamp or camera image, stamp or object record ID, My Collection/checklist
-          contents, collector observations or notes, label contents, name, email address, RevenueCat App User ID, or subscription
-          status from these events. Persistent person profiles, automatic screen or interaction capture, session recording,
-          surveys, feature flags, and advertising tracking are disabled.
+          contents, collector observations or notes, Stamp card contents, name, email address, or RevenueCat App User ID from
+          these events. Persistent person profiles and session recording are disabled, but that does not make every event anonymous.
+          On iOS, the SDK can record rapid repeated taps and their screen position to help identify frustrating interactions.
+          Automatic screen-view capture, surveys, feature flags and automatic lifecycle capture are disabled.
         </p>
         <p>
-          We use these aggregate events only to monitor reliability, understand adoption, and decide which app features and
+          We use these events only to monitor reliability, understand adoption, and decide which app features and
           reference data need improvement. We do not use them for advertising or to track activity across other companies'
           apps or websites.
+        </p>
+        <p>
+          As with any internet request, PostHog receives the network address used to deliver the event. The production project
+          discards the client IP address from stored events and location enrichment is disabled. The app does not request GPS or
+          precise-location permission for analytics.
         </p>
       </div>
 
@@ -84,7 +90,9 @@
           We do not collect barcode data or camera images from your device automatically.
         </p>
         <p>
-          If you use collection/checklist features, that data is stored locally on your device as part of normal app use. Label previews are also generated locally on-device.
+          If you use collection/checklist features, that data and your saved observations are stored locally on your device.
+          Stamp card previews are also generated locally on-device. Use Back up to keep a separate copy of your collection.
+          Cloud collection synchronisation is not included in version 5.1.1.
         </p>
         <p class="note">
           Technical note: the app supports the DataMatrix barcodes printed on modern Royal Mail stamps.
@@ -113,9 +121,9 @@
         <h2>Subscriptions and app functionality</h2>
         <p>
           The app uses RevenueCat to manage subscriptions, paywalls, purchase status, and restore-purchase support.
-          RevenueCat may process an anonymous app user ID, purchase or subscription status, and privacy-light app
-          functionality attributes such as whether a successful scan or decode has happened, the last decoded product
-          type, whether the result matched the built-in checklist, and the camera scan count.
+          RevenueCat may process a generated app user ID, purchase or subscription status, and limited app
+          functionality attributes such as whether a successful scan or decode has happened, when it last happened,
+          its source and product type, whether the result matched the built-in catalogue, and the camera scan count.
         </p>
         <p>
           These RevenueCat attributes are used for app functionality and support. They do not include barcode strings,
@@ -124,11 +132,12 @@
       </div>
 
       <div class="section">
-        <h2>Support emails</h2>
+        <h2>Support emails and collector reports</h2>
         <p>
-          If you contact us at <a href="mailto:beta@stampdecoder.app">beta@stampdecoder.app</a>,
-          we will receive your email address and the contents of your message. We use this only to respond
-          to your request and to improve the app.
+          Opening a report prepares a draft in your own mail app. You can review or edit it, and nothing is sent unless
+          you choose to send it. The draft may include the item or characteristic you are reporting, relevant barcode text
+          where shown, app/catalogue versions, and text you add. If you send it, we receive your email address and message.
+          We use these to respond and improve the app. Do not include information you do not want to share.
         </p>
       </div>
 
@@ -152,8 +161,10 @@
       <div class="section">
         <h2>Your choices</h2>
         <p>
-          You can stop using the app at any time. If the app stores any data locally on your device (for example,
-          user preferences), removing the app will remove that local data.
+          You can manage your saved collection in the app and use Back up to keep a separate copy. Removing the app can
+          remove its local collection and preferences, so back up first. Uninstalling does not cancel a subscription;
+          manage that through your Apple or Google store account. Uninstalling also does not itself delete information
+          already processed by service providers. Contact beta@stampdecoder.app with privacy questions or requests.
         </p>
         <p>
           For the website, you can reject analytics when first asked or revisit <a href="/?cookie-settings=1">Cookie settings</a>
