@@ -60,7 +60,7 @@ a{ color: inherit; }
   height:102px;
   border-radius:0;
   background-color: transparent;
-  background-image: url("/assets/img/brand.png");
+  background-image: url("/assets/img/brand.png?v=11");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
