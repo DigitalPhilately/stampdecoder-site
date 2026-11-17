@@ -105,6 +105,23 @@
     });
   }
 
+
+  // Record clicks on App Store / Google Play links (only sent once analytics has been accepted).
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest && event.target.closest("a[href]");
+    if (!link) return;
+    var href = link.getAttribute("href");
+    var store = href.indexOf("apps.apple.com") !== -1 ? "app_store"
+      : href.indexOf("play.google.com") !== -1 ? "google_play" : null;
+    if (!store || getConsent() !== "accepted" || typeof window.gtag !== "function") return;
+    var section = link.closest("section[id], div[id]");
+    window.gtag("event", "store_click", {
+      store: store,
+      placement: section ? section.id : "page",
+      link_text: (link.textContent || "").trim().slice(0, 60)
+    });
+  }, true);
+
   document.addEventListener("DOMContentLoaded", function () {
     buildBanner();
 
